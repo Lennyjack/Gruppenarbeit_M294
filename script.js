@@ -1,5 +1,3 @@
-function handleFormSubmit(event) {
-    event.preventDefault();
 
     // Eingabedaten abrufen
     const customerName = document.getElementById('customerName').value;
@@ -7,9 +5,12 @@ function handleFormSubmit(event) {
     const phone = document.getElementById('phone').value;
     const priority = document.getElementById('priority').value;
     const service = document.getElementById('service').value;
-
     // Berechnung des Abholdatums
-    const pickupDate = calculatePickupDate(priority);
+const pickupDate = calculatePickupDate(priority);
+
+
+function handleFormSubmit(event) {
+    event.preventDefault();
 
     // Validierung und Senden der Daten an den Server
     if (validateEmail(email) && validatePhone(phone)) {
