@@ -20,7 +20,7 @@ function handleFormSubmit(event) {
     const priority = document.getElementById('priority').value;
     const service = document.getElementById('service').value;
     // Berechnung des Abholdatums
-    const pickup_Date = "2024-11-02T18:12:43.511Z";   // calculatePickupDate(priority);
+    const pickup_Date = new Date().toISOString();   // calculatePickupDate(priority);
 
     // Validierung und Senden der Daten an den Server
     //if (validateEmail(email) && validatePhone(phone)) {
