@@ -8,6 +8,15 @@
     // Berechnung des Abholdatums
 const pickupDate = calculatePickupDate(priority);
 
+function validateEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
+function validatePhone(phone) {
+    const phonePattern = /^[0-9\s+()-]{7,15}$/;
+    return phonePattern.test(phone);
+}
 
 function handleFormSubmit(event) {
     event.preventDefault();
