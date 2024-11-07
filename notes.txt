@@ -1,0 +1,31 @@
+Anmeldung kann wie folgt aussehen 
+
+        // Server-Aufruf mit angepasstem API-Endpunkt
+        fetch('http://localhost:5000/api/registration', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (response.ok) {
+                document.getElementById('confirmationMessage').textContent = 
+                    `Vielen Dank, ${customerName}! Ihr Serviceauftrag wurde erfolgreich eingereicht. Abholdatum: ${pickupDate}`;
+            } else {
+                document.getElementById('confirmationMessage').textContent = 
+                    'Fehler beim Absenden. Bitte versuchen Sie es erneut.';
+            }
+        })
+        .catch(error => console.error('Error:', error));
+
+Jedoch wäre es anstatt POST GET da der Webserver die Daten vom Server überprüfen möchte. 
+- neues formular erstellen
+    - emailadresse 
+    - password
+    - submit button
+- JS neue variabeln erstellen für emailadresse und password
+- GEt request machen
+- Get request mit verwendeten daten vergleichen
+- weiterleiten auf nächste Seite
+- kurz bergrüssung des users.
